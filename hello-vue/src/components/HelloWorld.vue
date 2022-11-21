@@ -18,8 +18,9 @@ export default {
     msg: String
   },
   mounted() {
-    this.$hello_api.getHelloMessage().then( resp => {
-      this.helloMessage = resp.message
+    this.$hello_api.getHelloMessage().then(resp => {
+      console.log(resp)
+      this.helloMessage = resp.messages
     })
   }
 }
